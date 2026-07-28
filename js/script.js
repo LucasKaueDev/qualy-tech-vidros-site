@@ -452,12 +452,6 @@ function animateCounters(entries,observer){
         const target =
             Number(number.dataset.count);
 
-        const prefix =
-            target === 98 ? "" : "+";
-
-        const suffix =
-            target === 98 ? "%" : "";
-
         let current = 0;
 
         const increment =
@@ -469,7 +463,7 @@ function animateCounters(entries,observer){
                 Math.min(current+increment,target);
 
             number.textContent =
-                `${prefix}${current}${suffix}`;
+                current;
 
             if(current===target){
 
